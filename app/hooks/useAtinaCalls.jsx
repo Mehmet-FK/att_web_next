@@ -1,6 +1,6 @@
+"use client";
 import { useDispatch } from "react-redux";
 import { toastErrorNotify, toastSuccessNotify } from "../helpers/ToastNotify";
-// import { data } from "../userData";
 import { fetchFail, fetchStart, getSuccess } from "../redux/slices/atinaSlice";
 import useAxios from "./useAxios";
 
@@ -43,6 +43,7 @@ const useAtinaCalls = () => {
     getAtinaData(`api/AtinaItems/search?filter=aufeldgasse&type=${a}`);
   //PUT
   const putUserData = (info) => putAtinaData("AtinaUsers", info);
+
   return {
     getUsersData,
     getMobileBookingsData,

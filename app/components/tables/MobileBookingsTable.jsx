@@ -130,7 +130,6 @@ const MobileBookingsTable = () => {
 
   useEffect(() => {
     getMobileBookingsData();
-
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [restart]);
 

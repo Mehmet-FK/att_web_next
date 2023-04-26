@@ -24,45 +24,6 @@ import IndeterminateCheckBoxIcon from "@mui/icons-material/IndeterminateCheckBox
 import ModalTab from "./ModalTabs";
 import { modalStyles } from "@/app/styles/modal_styles";
 
-const style = {
-  cardStyle: {
-    position: "absolute",
-    top: "50%",
-    left: "50%",
-    transform: "translate(-50%, -50%)",
-    width: 400,
-    bgcolor: "background.paper",
-    border: "2px solid #000",
-    boxShadow: 24,
-    padding: "0 1rem 1rem 1rem",
-    overflow: "auto",
-  },
-  imgStyle: {
-    backgroundImage: `url(${placeholder})`,
-    backgroundPosition: "center",
-    backgroundSize: "cover",
-    height: "10rem",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    fontSize: "7rem",
-    color: "#00000055",
-    backgroundColor: "#ddd",
-  },
-  input: {
-    border: "2px solid red",
-    color: "red",
-    height: "2rem",
-    display: "none",
-  },
-  text: {
-    padding: "10px 15px",
-  },
-  button: {
-    backgroundColor: "#e10000",
-  },
-};
-
 const userRoles = [
   { role: "Option 1", hasOwn: false },
   { role: "Option 2", hasOwn: true },
@@ -158,11 +119,9 @@ const UserModal = ({ setOpenUserModal, openUserModal, user }) => {
                 <Box
                   sx={{
                     ...modalStyles.userModal.imgStyle,
-                    backgroundImage: `url(${placeholder})`,
+                    backgroundImage: "url(/placeholder.jpg)",
 
-                    backgroundImage: selectedImage
-                      ? `url(${selectedImage})`
-                      : style.imgStyle.backgroundImage,
+                    backgroundImage: selectedImage && `url(${selectedImage})`,
                   }}
                 >
                   <PhotoCameraIcon
@@ -172,7 +131,7 @@ const UserModal = ({ setOpenUserModal, openUserModal, user }) => {
                   />
                   <input
                     ref={inputRef}
-                    style={style.input}
+                    style={modalStyles.userModal.input}
                     id="imgInput"
                     type="file"
                     accept="image/*"
@@ -276,13 +235,13 @@ const UserModal = ({ setOpenUserModal, openUserModal, user }) => {
                 >
                   <Button
                     onClick={handleSubmit}
-                    sx={style.button}
+                    sx={modalStyles.userModal.button}
                     variant="contained"
                   >
                     Speichern
                   </Button>
                   <Button
-                    sx={style.button}
+                    sx={modalStyles.userModal.button}
                     onClick={handleClose}
                     variant="contained"
                   >

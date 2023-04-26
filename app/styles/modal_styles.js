@@ -84,13 +84,16 @@ export const modalStyles = {
       height: "2rem",
       display: "none",
     },
-    inputGroup: {
-      width: "100%",
+    imgStyle: {
+      backgroundPosition: "center",
+      backgroundSize: "cover",
+      height: "10rem",
       display: "flex",
-      flexDirection: "column",
-      justifyContent: "center",
       alignItems: "center",
-      rowGap: "15px",
+      justifyContent: "center",
+      fontSize: "7rem",
+      color: "#00000055",
+      backgroundColor: "#ddd",
     },
     text: {
       padding: "10px 15px",

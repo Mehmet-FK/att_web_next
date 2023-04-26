@@ -20,13 +20,13 @@ import ListItemText from "@mui/material/ListItemText";
 import LibraryBooksIcon from "@mui/icons-material/LibraryBooks";
 import NfcIcon from "@mui/icons-material/Nfc";
 import PeopleAltIcon from "@mui/icons-material/PeopleAlt";
-import logo from "@/app/assets/attensam-logo.svg";
+// import logo from "@/app/assets/attensam-logo.svg";
 import { Button, Paper, Tooltip, Typography } from "@mui/material";
 import TapAndPlayOutlinedIcon from "@mui/icons-material/TapAndPlayOutlined";
 import ErrorModal from "../modals/ErrorModal";
 import Loading from "../Loading";
 import Link from "next/link";
-import useAtinaCalls from "@/app/hooks/useAtinaCalls";
+// import useAtinaCalls from "@/app/hooks/useAtinaCalls";
 import { dashboardStyles } from "@/app/styles/dashboard_styles";
 
 const drawerWidth = 240;
@@ -100,7 +100,7 @@ export default function Dashboard({ children }) {
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
 
-  const { getUsersData } = useAtinaCalls();
+  // const { getUsersData } = useAtinaCalls();
 
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -109,10 +109,10 @@ export default function Dashboard({ children }) {
     setOpen(false);
   };
 
-  React.useEffect(() => {
+  /* React.useEffect(() => {
     getUsersData();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, []); */
 
   const drawerList = [
     {
@@ -163,7 +163,11 @@ export default function Dashboard({ children }) {
               <MenuIcon />
             </IconButton>
             <Box sx={dashboardStyles.logo.wrapper}>
-              <img style={dashboardStyles.logo.img} src={logo} alt="logo" />
+              <img
+                style={dashboardStyles.logo.img}
+                src={"/attensam-logo.svg"}
+                alt="logo"
+              />
               <Box sx={{ display: "flex", columnGap: "8px" }}>
                 <Typography variant="h6">Aktueller Benutzer</Typography>
                 <Link href="">
@@ -193,7 +197,7 @@ export default function Dashboard({ children }) {
                 sx={{ display: "block" }}
               >
                 <Tooltip title={item.text} placement="right" arrow>
-                  <Link href={item.nav}>
+                  <Link href={item.nav} style={dashboardStyles.link}>
                     <ListItemButton
                       sx={{
                         minHeight: 48,

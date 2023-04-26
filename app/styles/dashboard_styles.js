@@ -8,6 +8,10 @@ export const dashboardStyles = {
     },
     img: { width: "150px", cursor: "pointer" },
   },
+  link: {
+    textDecoration: "none",
+    color: "inherit",
+  },
   logoutBtn: {
     backgroundColor: "#fff",
     color: "#e10000",

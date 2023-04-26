@@ -5,48 +5,8 @@ import Modal from "@mui/material/Modal";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import { Button, TextField, Tooltip } from "@mui/material";
-// import placeholder from "../../assets/placeholder.jpg";
 import { useState } from "react";
 import { modalStyles } from "@/app/styles/modal_styles";
-let placeholder = "";
-// const style = {
-//   cardStyle: {
-//     position: "absolute",
-//     top: "50%",
-//     left: "50%",
-//     transform: "translate(-50%, -50%)",
-//     width: 400,
-//     bgcolor: "background.paper",
-//     border: "2px solid #000",
-//     boxShadow: 24,
-//     p: 2,
-//     overflow: "auto",
-//   },
-//   imgStyle: {
-//     backgroundImage: `url(${placeholder})`,
-//     backgroundPosition: "center",
-//     backgroundSize: "cover",
-//     height: "15rem",
-//     display: "flex",
-//     alignItems: "center",
-//     justifyContent: "center",
-//     fontSize: "10rem",
-//     color: "#00000055",
-//     backgroundColor: "#ddd",
-//   },
-//   input: {
-//     border: "2px solid red",
-//     color: "red",
-//     height: "2rem",
-//     display: "none",
-//   },
-//   text: {
-//     padding: "10px 15px",
-//   },
-//   button: {
-//     backgroundColor: "#e10000",
-//   },
-// };
 
 const BookingsModal = ({ setOpenBookingModal, openBookingModal, booking }) => {
   const handleClose = () => setOpenBookingModal(false);

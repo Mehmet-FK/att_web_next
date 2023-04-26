@@ -291,9 +291,13 @@ const ItemsTable = () => {
             </TableRow>
           </TableHead>
           <TableBody>
-            {shownData?.map((item) => {
+            {shownData?.map((item, i) => {
               return (
-                <ItemsTableRow item={item} selectedColumns={selectedColumns} />
+                <ItemsTableRow
+                  key={i}
+                  item={item}
+                  selectedColumns={selectedColumns}
+                />
               );
             })}
           </TableBody>
